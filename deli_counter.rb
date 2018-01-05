@@ -19,9 +19,9 @@ def line(katz_deli)
 end
 
 def now_serving(katz_deli)
-  if katz_deli.length == 0
+  if katz_deli.length == 0 #0 people in line 
     puts "There is nobody waiting to be served!"
   else
-    puts "Currently serving #{katz_deli.shift}."
+    puts "Currently serving #{katz_deli.shift}." #remove person from array/line
   end
 end
