@@ -15,4 +15,17 @@ def line(katz_deli)
       if x == katz_deli.length -1
         return_phase << "#{x + 1}. " << "#{element}"
       else
-        return_phase << "#{x + 1}. " <<"#{element} "
+        return_phase << "#{x + 1}. " << "#{element} "
+      end
+    end
+    puts return_phase
+  end
+end
+
+def now_serving(katz_deli)
+  if katz_deli.length == 0
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{katz_deli.shift}."
+  end
+end
