@@ -1,7 +1,7 @@
 # Write your code here.
 katz_deli = []
 
-def take_a_number(katz_deli, name)
+def take_a_number(katz_deli, name) #for person looking to join line
   katz_deli << name
   puts "Welcome, #{name}. You are number #{katz_deli.index(name)+1} in line."
 end
@@ -15,13 +15,6 @@ def line(katz_deli)
       names << "#{index + 1}. #{katz_deli}" #pass in each person position and their names
     end
     puts "The line is currently: #{names.join(" ") }"
-
-        return_phase << "#{x + 1}. " << "#{element}"
-      else
-        return_phase << "#{x + 1}. " << "#{element} "
-      end
-    end
-    puts return_phase
   end
 end
 
