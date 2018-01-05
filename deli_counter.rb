@@ -7,12 +7,15 @@ def take_a_number(katz_deli, name)
 end
 
 def line(katz_deli)
-  return_phase = "The line is currently: "
   if katz_deli.length == 0
     puts "The line is currently empty."
-  else
-    katz_deli.each_with_index do |element, x|
-      if x == katz_deli.length -1
+  elsif katz_deli.length >= 1
+    names = [] #empty array for names
+    katz_deli.each_with_index do |katz_deli, index| #iteration over each element in array AKA peep in line
+      names << "#{index + 1}. #{katz_deli}" #pass in each person position and their names
+    end
+    puts "The line is currently: #{names.join(" ") }"
+
         return_phase << "#{x + 1}. " << "#{element}"
       else
         return_phase << "#{x + 1}. " << "#{element} "
